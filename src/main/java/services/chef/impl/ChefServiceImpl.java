@@ -5,6 +5,7 @@ import Enumerations.EspecialidadEnum;
 import services.chef.ChefService;
 
 import java.util.Scanner;
+import java.util.UUID;
 
 public class ChefServiceImpl implements ChefService {
     Scanner sc = new Scanner(System.in);
@@ -21,7 +22,6 @@ public class ChefServiceImpl implements ChefService {
             System.out.println(index + ": " + especialidadEnum);
             index++;
         }
-        System.out.println("Ingrese una opción para la especialidad del Chef: ");
 //        System.out.println("1) Pasteleria");
 //        System.out.println("2) Charcuteria");
 //        System.out.println("3) Cocina Vegetariana");
@@ -32,7 +32,10 @@ public class ChefServiceImpl implements ChefService {
 //        System.out.println("8) Cocina a la Parilla");
 //        System.out.println("9) Cocina Dietetica");
 //        System.out.println("10) Cocina de Autor");
+        System.out.println("Ingrese una opción para la especialidad del Chef: ");
         int numeroEspecialidad = sc.nextInt();
+        sc.nextLine();
+        nuevoChef.setIdChef(UUID.randomUUID());
 
         nuevoChef.setEspecialidad(
             switch (numeroEspecialidad){

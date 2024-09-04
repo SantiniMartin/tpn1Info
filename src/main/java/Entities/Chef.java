@@ -3,7 +3,6 @@ package Entities;
 import Enumerations.EspecialidadEnum;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
 
@@ -38,7 +37,7 @@ public class Chef {
         return especialidad;
     }
 
-    public void setEspecialidad(EspecialidadEnum complejidad) {
+    public void setEspecialidad(EspecialidadEnum especialidad) {
         this.especialidad = especialidad;
     }
 
@@ -56,7 +55,8 @@ public class Chef {
 
     @Override
     public String toString() {
-        return  "Nombre del Chef: " + nombreChef +
+        return  "ID: " + idChef +
+                ", Nombre del Chef: " + nombreChef +
                 ", Especialidad: " + especialidad +
                 ", Eventos: " + eventos;
     }
